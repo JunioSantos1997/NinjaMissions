@@ -6,15 +6,23 @@ import java.util.Scanner;
 
     public class Program {
         public static void main(String[] args) {
+
+
+          //Abri um scanner e usei uma ArrayList para armazenar os objetos na memória 
+
             Scanner scanner = new Scanner(System.in);
             List<Ninja> bancoDeNinjas = new ArrayList<>();
 
+          //Criei primeiro as missões 
 
+   
             Missao missao1 = new Missao("Resgatar um gato", StatusDaMissao.CONCLUIDA, 'D');
             Missao missao2 = new Missao("Patrulha noturna", StatusDaMissao.EM_ANDAMENTO, 'C');
             Missao missao3 = new Missao("Treinamento conjunto", StatusDaMissao.PENDENTE, 'E');
             Missao missao4 = new Missao("Infiltração secreta", StatusDaMissao.EM_ANDAMENTO, 'A');
+           
 
+      //Após criar as missões eu criei os ninjas:
 
             Ninja kakashi = new Ninja("Kakashi Hatake", 30, missao4);
             Ninja naruto = new Ninja("Naruto Uzumaki", 16, missao2);
@@ -22,11 +30,17 @@ import java.util.Scanner;
             Ninja sasuke = new Ninja("Sasuke Uchiha", 16, missao3);
 
 
+
+      //Adicionei os ninjas criados no "banco" entre muitas aspas
+
+
             bancoDeNinjas.add(kakashi);
             bancoDeNinjas.add(naruto);
             bancoDeNinjas.add(sakura);
             bancoDeNinjas.add(sasuke);
 
+
+         // Printei a lista para apresentar os dados dos ninjas para o usuário 
 
             System.out.println("\n🔹 Lista Inicial de Ninjas e Missões 🔹\n");
             for (Ninja ninja : bancoDeNinjas) {
